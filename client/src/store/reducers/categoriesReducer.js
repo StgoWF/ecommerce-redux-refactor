@@ -1,4 +1,4 @@
-import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from '../actions';
+import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from '../../actions';
 
 const initialState = {
   items: [],

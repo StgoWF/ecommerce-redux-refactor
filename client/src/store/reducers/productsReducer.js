@@ -1,15 +1,16 @@
-import { SET_PRODUCTS } from '../actions';
+import { UPDATE_PRODUCTS } from '../../actions';
 
 const initialState = {
   products: [],
+  currentCategory: '',
 };
 
 const productsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_PRODUCTS:
+    case UPDATE_PRODUCTS:
       return {
         ...state,
-        products: action.payload,
+        products: action.products,
       };
     default:
       return state;
