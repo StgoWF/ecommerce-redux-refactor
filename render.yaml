@@ -3,12 +3,10 @@ services:
     name: mern-shopping
     env: node
     plan: free
-    buildCommand: yarn build
-    startCommand: yarn start
+    buildCommand: npm install && npm run build
+    startCommand: npm start
     envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://stgoweinsteinf:Stgo1245@cluster0.8dthgs5.mongodb.net/mern-shopping?retryWrites=true&w=majority
       - key: NODE_ENV
         value: production
-      - key: MONGODB_URI
-        fromDatabase:
-          name: mern-db
-          property: connectionString
